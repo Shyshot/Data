@@ -1,0 +1,1 @@
+Callback is the function which is used as a argument for a another function

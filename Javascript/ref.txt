@@ -1,0 +1,145 @@
+string is a sequence of characters used to represent text
+
+create Length
+let str="Piyush";
+ 
+ string properties:
+    string Length-->str.length
+    string indices-->This is a property which can be used to get a letter of a string at a specific position 
+    i.e In Piyush too get s we get to enter its index i.e. 4. Index of a string always begins with 0
+    use case of string indices-->
+    console.log(str[x]) where, x is the index of the letter or the position of the string we need to get
+
+Template Literals
+    You can variable or part of object in a string directly.
+    this is declared in the form of `Y` here y is the text to be used as string 
+    variable can be addded using the ${x}here x is the variable or object or declared part you can also use it for operations like${a+b+c}
+    using variable in a strign using Template Literals is called string Interpolation
+
+Escape characters
+    This are basic character is used to get a new line in console or in output like <br> tag in html
+    this is declared by \n for new line \t for a tab space tab space is_____this much space
+    In a string /n only occupys 1 index.
+
+String methods
+    This is used to manipulate string
+    This can be appiled as str.____() the blank is a method
+    This newer changes the og string but creates a new string..String are Immutable in js 
+    ex:
+    ToUppercase-->var.toUppperCase()
+    ToLowercase-->var.toLowerCase()
+    remove whitespace-->var.trim()---->This removes the space given before begining & after ending of the string
+    slicer-->var.slice(a,b?)---->This trims the String from index no: a to index no: b, here b is not included in the sliced string if b is not mentioned it provides complete string from a
+    concatination-->var.concat(str2)-->This joins str2 with var simply joins two strings it can be also done using the + sign 
+    replace-->var.replace(a,b)---->It replace value a with value b condition is that a must be present in var, it replaces only 1 occurance of a
+           -->var.replaceAll(a,b)---->This replaces all occurance of a in var
+    character At-->var.charAt(a)---->This tells the character at index no a 
+
+
+
+
+Array 
+    this is a collection of  items in a linear way. It does not need to give key like as of object all thats important is the position.
+    syantx is --> let mars=[98,98,69,69]; it can also contain text number and boolean values.
+    All the intems in a array will contain a single name contrast to as of object. Type of array is object
+    Arrays are Immutable in javascript
+
+Properties of Array
+    Length-->array.length
+    indices of array-->array[a]; Where a is index of the required element, each element carrys 1 index starting from 0 to (n-1)
+    Change of element-->array[a]=x ; this changes the element of index a in the array to x
+
+Method of array
+
+    Push-->array.push("a")---->To add something at the end, here a is item of be added. 
+                    ---->We can also add mutiple items at end using the above syntax as->push("a","b","c"....."z")
+    Pop-->array.pop()---->These delete the item at the end of array, we can also stored the pop item using->let deleted=array.pop()
+    toString-->array.string()---->This converts the array into a new string. 
+                             ---->Without distrubing the existing string this property generates a new string which can be stored using similar syntax given above
+    Concat-->array.concat(a,b,c,...n)---->This joins multiple array and creates a new array which can stored similarly. where a b c are existing array to concatinate
+    Unshift-->array.unshift("a")---->Similar to push but instead adds items in the beginning.
+    Shift-->array.shift()---->Similar to pop but insted delete item from beginning. Has same storage property as push
+    Slice-->array.slice(a,b)---->It slices a part of array from index no a to b, in which the element of of index no b will not be included
+                            ---->This does not change a new array but creates a new array which can be stored similarly
+    Splice-->array.splice(a,b,c)---->It changes the original array a index from where change need to be performed b is the number of elements to be deleted from a
+                                ---->c is the new elements to be added in array it can be none it can singular or multiple
+            example of Splice:-
+                let a=[1,2,3,4,5,6];
+                a.splice(2,2,101,102) the new array changes from indexx no 2 till the next to elements and changes to 101 and 102
+                the new a=[1,2,101,102,5,6];
+                if a.splice(2,2) the new array will not undergo change step but only the delete part that is
+                the new a=[1,2,5,6]; 
+                if a.splice(2,0,101) the new will not undergo delete insted it wil add 101 before index no 2
+                the new a=[1,2,101,3,4,5,6];
+                if a.splice(2) the new array will under delete from index no 2 till the last
+                the new a=[1,2];
+Function
+    Block of code that perform a specific task, ca be invoked(called) whenever needed is Function os always caled with parentthesis
+    defenied as:-
+        function functionName(){
+            code to be executed
+        }
+        or
+        function functionName(param1,param2){
+            code to be executed
+        }
+    called by:-
+        functionName();
+        parameters of function has block scope
+    Arrow function
+        It ia function which can be directly declared along with variable by using => sign
+
+forEach Loop in Array
+    arr.forEach(callBackFunction)
+    callBackFunction is function which is used as a agrument for another function
+
+    example:-
+    let arr=[1,2,3,4,5];
+        arr.forEach(function printVal(val){//here value is each element of arrays in order of there index
+            console.log(val);
+        })
+    forEach loop can have 3 variable 1.value of array 2. Index related to the array 3.Complete array itself
+    
+    example:-
+    let arr=["pune","mumbai","delhi"];
+    arr.forEach((val,idx,arr)=>{
+        console.log(val,idx,arr);
+    })
+    output:-
+    pune 0 (3) ['pune', 'mumbai', 'delhi'] 
+    mumbai 1 (3) ['pune', 'mumbai', 'delhi']
+    delhi 2 (3) ['pune', 'mumbai', 'delhi']
+    here val stores the value of array idx stores index correspoding to value and arr stores the complete array and later can used in the function.
+
+Array methods
+    map-->arr.map(callBackFunction(valu ,index,array))-->it is used  create a new array using teh elements of existing array
+    example:-
+
+    let nums=[67,87,98]
+    let newArr=nums.map((val)=>{
+        return val*2;
+    })
+    console.log(newArr);
+    output:-
+    [134, 174, 196]; this function  has created a new array of twice of elements of the existing array
+
+    Filter-->arr.filter(callBackFunction(value)=>{})-->it used to create a new array by filterting elements of existing array based on the condition in the function
+    example:-
+    let nums=[69,58,52,48,69];
+    let newArr=nums.filter((val)=>{
+        return val %2===0;
+    })
+        console.log(newArr)
+    output:-
+    [58, 52, 48] The given function has returned only the even numbers from the existing array to new array
+
+    reduce-->arr.reduce((res,curren)=>{})-->it is used to reduce the value of existing array to a array of 1 element by performing required operations
+    example
+    let arry=[1,2,3,4];
+    let sum=arry.reduce((res,current)=>{
+        return res+ current;
+    })
+    console.log(sum);
+    output:-
+    10 The reduce method has added all the elements of array and created a new array of 1 element
+    

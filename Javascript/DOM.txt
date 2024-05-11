@@ -1,0 +1,81 @@
+ DOM document object model
+    DOM is used for dyanmical change or manipulation of html or css file through javascript commands.
+
+    DOM manipulation:-
+
+    selecting ELements:
+        selecting by id:
+            document.getElementById("myid");
+        selecting ELement by class name:
+            document.getElementsByClassName("myClass");
+        selecting ELement by tags:
+            document.getElementsByTagName("tag");
+    
+        query selectors:
+            document.querySelector("myid/myClass/tag")-->this attribute automatcially detects the type of ELement.
+             it returns the first element of the respective id class or tag. Class if mentioned in query selector should always begin with a (.) 
+             Id if mentioned in query selector should always begin with a (#  ) 
+            
+            document.querySelectorAll("myid/myClass/tag")-->
+             it  returns a node list respective to the id class or tag
+
+    Properties of DOM manipulation
+
+        tagName -->Returns the name of tag to the coressponding tag
+        innerText-->returns the text content of  the element and its children on the basis of hireachy of DOM
+        innerHtml-->returns the text along with the  html tags in the element
+        textContent-->returns the text along with the hidden ELements
+    
+    Attribute in DOM manipulation
+    
+        getAttribute(attr)//to get the value of the desired attribute
+        Example:-
+        setAttribute(attr,val)//to change the value of  attribute from existing  to val
+        Example
+
+        for style
+         Style of the node ca be accessed using the syntax
+         node.style
+         style of the node can also be modifided by the using the syntax
+         node.style.requiredStylechange="change";
+         Example:
+
+        insert ELement
+        It is two step process 1.create the element 2. add element
+        step 1 Create the element:-
+        let newEl=document.createElement("requiredElement");
+        step 2 Add element:-
+        Add a element can be done through various different tags
+
+        1.node.append(newEl)//adds at the end of the node(inside)
+        2.node.prepend(newEl)//adds at the start of the node(inside)
+        3.node.before(newEL)//add before the node(outside)
+        4.node.after(newEl)//add after the node(outside)
+        Example:-
+        
+
+        delete element:-
+        node.remove() Remove the node
+
+Events:-
+The change in state of an object is known as an Events
+Event is fired to notify code of a interesting changes that may affect code execution
+Example of event:-
+ mouse(click,double click,hover,etc)
+ keyboard(keypress,keyup,keydown)
+ form event(submit,focus etc.)
+ print event
+
+Basic Example
+
+This is the example of inline event handling, which not considered to be a good practice as coders due to bulky and unreadable code
+
+
+Event handling in javascript
+ node.event()=>{
+     //handle here
+ }
+       
+Event Listener
+node.addEventListener(event,callBack);
+node.removeEventListener(event,callBack);

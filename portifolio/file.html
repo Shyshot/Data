@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>File uploader</title>
+        <link rel="stylesheet" href="style1.css">
+    </head>
+    <body>
+        <body id="index">
+            <div class="topnav">
+                <a class="home">DropZone</a>
+                <a href="" class="right">I am social on</a>
+                <a href="contact.html" class="right">Contact Page</a>
+                <a href="index.html" class="right">Home</a>
+            </div> 
+        <div class="dropzone">
+        <form classs="dropzone-box">
+            <h2>Upload and attach file</h2>
+            <p>Click to upload or drag and drop</p>
+            <div class="dropzone-area">
+                <div class="file-upload-icon"><!-- svg --></div>
+                <input type="file" required id="upload.file" name="upload.file">
+                <p class="file.info">No files Selected</p>
+
+            </div>
+            <div class="dropzone-action">
+                <button type="reset">Cancel</button>
+                <button id="submit-button" type="submit">Save</button>
+            </div>
+        </div>    
+        </form>
+        <script src="file.js"></script>
+    </body>
+</html>

@@ -1,0 +1,48 @@
+this function is used as to acess a value of the same object where is this function is called.
+
+
+
+Prototypes:--
+      A javascript object is an entity having state and behaviour(properties and method)
+      JS objects hav ea special property called Prototype
+       We can set prototype using __proto__
+       Ex:-
+
+Classes:--
+      Class is a program-code template for creating objects
+      Those objects will have some states(variables) & some behavior(function) inside it.
+
+      class myClass{
+          constructor(){....}
+          nyMethod(){...}
+      }
+      An object can be created having the function of the class it can add by:--
+        let Object = new myClass();
+      
+      Ex:-
+
+      Constructor() method is :
+         Automatically inovked by new class
+         Initilizes object 
+
+
+Inheritance:--
+      Inheritance is passing down properties & methods from parent class to child class it is done using the keyword extends
+
+      class Parent{
+
+      }
+
+      class child extend Parent {
+           
+      }
+
+
+super Keyword
+
+      The super keyword is usedd to call constructor of its parent class to access the parent's properties ad methods
+
+
+      super(args) ///calls Parent's constructor
+
+      super.parentMethod(args)

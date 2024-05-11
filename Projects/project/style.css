@@ -1,0 +1,29 @@
+body{
+    background-color: black;
+    padding: 9% 0% 0% 2%;
+     
+}
+.gallery{
+    display: flex;
+    margin: 100px;
+    width: 30%;
+    height: 250px;
+    gap: 3px;
+
+}
+.gallery img{
+    width: 15%;
+    height: 250px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border: 2px solid white;
+    border-radius: 5px;
+    transition: all ease 0.5s;
+
+}
+
+.gallery img:hover{
+    cursor: pointer;
+    width: 100%;
+    scale: 2;
+}

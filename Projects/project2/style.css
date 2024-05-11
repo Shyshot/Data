@@ -1,0 +1,25 @@
+h1:hover
+{
+    background:linear-gradient(90deg,#ff9933,#ffffff,#138808) ;
+    color: transparent;
+    -webkit-background-clip: text;
+    font-size: 110px;
+    font-family:Arial, Helvetica, sans-serif ;
+    left: 50%;
+    top:25%;
+    transform: translate(-50%,50%);
+    position: absolute;
+
+}
+body
+{
+    background-color: darkmagenta;
+}
+h1
+{
+    transition: all ease ;
+    font-style: italic;
+    font-weight: bolder;
+    color:gold;
+    transform: 5s;
+}
